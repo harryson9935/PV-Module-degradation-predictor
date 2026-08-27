@@ -1,0 +1,58 @@
+{
+  "dataset_shape": [
+    2000,
+    11
+  ],
+  "features": [
+    "module_age_years",
+    "ambient_temp_c",
+    "module_temp_c",
+    "relative_humidity_pct",
+    "daily_temp_swing_c",
+    "irradiance_kwh_m2_day",
+    "soiling_index"
+  ],
+  "target": "cumulative_degradation_pct",
+  "regression_results": {
+    "Linear Regression": {
+      "R2": 0.7779214080753738,
+      "RMSE": 3.448744927108967,
+      "MAE": 2.5608033563413652
+    },
+    "Random Forest": {
+      "R2": 0.870323527867991,
+      "RMSE": 2.635350113287733,
+      "MAE": 1.9951907833333338,
+      "best_params": {
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "n_estimators": 150
+      }
+    },
+    "Gradient Boosting": {
+      "R2": 0.8788605767728773,
+      "RMSE": 2.5471262867790174,
+      "MAE": 1.9426022706832953,
+      "best_params": {
+        "learning_rate": 0.05,
+        "max_depth": 4,
+        "n_estimators": 150
+      }
+    }
+  },
+  "best_model": "Gradient Boosting",
+  "best_model_r2": 0.8788605767728773,
+  "cross_val_r2_mean": 0.8711436517256095,
+  "cross_val_r2_std": 0.020867517539570366,
+  "fault_detection_accuracy_pct": 90.0,
+  "confusion_matrix": [
+    [
+      294,
+      15
+    ],
+    [
+      25,
+      66
+    ]
+  ]
+}
